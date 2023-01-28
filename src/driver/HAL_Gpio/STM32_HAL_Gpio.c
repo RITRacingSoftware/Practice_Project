@@ -7,8 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define STATUS_LED_PIN_POS (2)
-#define CHARGE_ENABLE_PIN_POS (8)  
+#define STATUS_LED_PIN_POS (8) 
 #define CHARGE_AVAILABLE_PIN_POS (6) 
 #define SHUTDOWN_LINE_PIN_POS (7)
 
@@ -50,10 +49,6 @@ static void get_GPIO_TypeDef(GpioPin_e thisPin, struct PIN_Typedef *thisGPIO)
         case GpioPin_STATUS_LED:
             thisGPIO->GPIOx = GPIOA;
             thisGPIO->GPIO_Pin_Pos = STATUS_LED_PIN_POS;
-            break;
-        case GpioPin_CHARGE_ENABLE:
-            thisGPIO->GPIOx = GPIOA;
-            thisGPIO->GPIO_Pin_Pos = CHARGE_ENABLE_PIN_POS;
             break;
         case GpioPin_CHARGER_AVAILABLE:
             thisGPIO->GPIOx = GPIOA;
