@@ -223,7 +223,7 @@ g_pfnVectors:
   .thumb_set NMI_Handler,Default_Handler
 
   .weak HardFault_Handler
-  .thumb_set HardFault_Handler,hardfault_handler_routine
+  .thumb_set HardFault_Handler,Default_Handler
 
   .weak SVC_Handler
   .thumb_set SVC_Handler,Default_Handler

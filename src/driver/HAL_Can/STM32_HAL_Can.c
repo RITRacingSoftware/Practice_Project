@@ -189,7 +189,7 @@ void HAL_Can_IRQ_handler(void)
 
         //Unhook can function through sephamore
         BaseType_t ret = pdFALSE;
-        xSemaphoreGiveFromISR(can_message_recieved_semaphore, &ret);
+        // xSemaphoreGiveFromISR(can_message_recieved_semaphore, &ret);
 
         portYIELD_FROM_ISR( ret );
     }
@@ -200,7 +200,7 @@ void HAL_Can_IRQ_handler(void)
         if(!CAN_is_transmit_queue_empty_fromISR())
         {
             BaseType_t ret = pdFALSE;
-            xSemaphoreGiveFromISR(can_message_transmit_semaphore, &ret);  
+            // xSemaphoreGiveFromISR(can_message_transmit_semaphore, &ret);  
             
             portYIELD_FROM_ISR( ret );
         }

@@ -78,8 +78,8 @@ void HAL_Gpio_init(void)
     populate_Init_Struct(&gpioInit, BIT(STATUS_LED_PIN_POS), GPIO_Mode_OUT, GPIO_Speed_Level_1, GPIO_OType_PP, GPIO_PuPd_NOPULL); //Not sure about speed, otype and pupd
     GPIO_Init(GPIOA, &gpioInit);
     //Init CHARGE_ENABLE pin
-    populate_Init_Struct(&gpioInit, BIT(CHARGE_ENABLE_PIN_POS), GPIO_Mode_OUT, GPIO_Speed_Level_1, GPIO_OType_PP, GPIO_PuPd_NOPULL); //Not sure about speed, otype, and pupd
-    GPIO_Init(GPIOA, &gpioInit);
+    // populate_Init_Struct(&gpioInit, BIT(CHARGE_ENABLE_PIN_POS), GPIO_Mode_OUT, GPIO_Speed_Level_1, GPIO_OType_PP, GPIO_PuPd_NOPULL); //Not sure about speed, otype, and pupd
+    // GPIO_Init(GPIOA, &gpioInit);
     //Init CHARGE_AVAILABLE
     populate_Init_Struct(&gpioInit, BIT(CHARGE_AVAILABLE_PIN_POS), GPIO_Mode_IN, GPIO_Speed_Level_1, GPIO_OType_PP, GPIO_PuPd_NOPULL);
     GPIO_Init(GPIOA, &gpioInit);
