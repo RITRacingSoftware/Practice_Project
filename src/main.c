@@ -53,8 +53,8 @@
  * the microcontroller/hardware. The helpful modules for this project are HAL_Aio and HAL_Gpio
  * 
  * Useful functions:
- * - uint16_t HAL_Aio_read(AIOpin_e pin); (from HAL_Aio.h)
- * - void HAL_Gpio_write(GpioPin_e pin, bool state); (from HAL_Gpio.h)
+ * - uint16_t HAL_Aio_read(AIOpin_e pin); (from HAL_Aio.h) (Use AIOpin_VOLTAGE for the pin parameter)
+ * - void HAL_Gpio_write(GpioPin_e pin, bool state); (from HAL_Gpio.h) (Use GpioPin_STATUS_LED for the pin parameter)
  * 
  * Note: To get the actual voltage value from the value returned from the HAL_Aio_read function, use the equation:
  * float voltage = ((float)returned_value / 4096) * 3.3V
