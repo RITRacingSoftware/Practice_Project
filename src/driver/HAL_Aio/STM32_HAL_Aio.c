@@ -42,12 +42,12 @@ uint16_t HAL_Aio_read(AIOpin_e pin)
     switch (pin)
     {
         case AIOpin_VOLTAGE:
-            channel = ADC_CHSELR_CHSEL3;
-            break;
-        
-        case AIOpin_ACCEL_B:
             channel = ADC_CHSELR_CHSEL4;
             break;
+        
+        // case AIOpin_ACCEL_B:
+        //     channel = ADC_CHSELR_CHSEL4;
+        //     break;
         
         // case AIOpin_VOLTAGE:
         //     channel = ADC_CHSELR_CHSEL2;

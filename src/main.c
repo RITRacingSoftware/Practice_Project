@@ -82,10 +82,10 @@ int main(int argc, char** argv)
     /**
      * LOOP
     */
+    
     for(;;)
     {
-
-
+        
     }
 
     return 0;
