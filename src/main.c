@@ -77,7 +77,7 @@ int main(int argc, char** argv)
     
     HAL_Gpio_init(); 
     HAL_Aio_init();
-    HAL_Uart_init();
+    // HAL_Uart_init();
 
     /**
      * LOOP

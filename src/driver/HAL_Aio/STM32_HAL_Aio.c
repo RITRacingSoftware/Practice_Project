@@ -13,7 +13,7 @@ void HAL_Aio_init(void)
 
     // configure the GPIO peripheral to allow use of the ADC for the 
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;//GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -41,7 +41,7 @@ uint16_t HAL_Aio_read(AIOpin_e pin)
     unsigned int channel;
     switch (pin)
     {
-        case AIOpin_ACCEL_A:
+        case AIOpin_VOLTAGE:
             channel = ADC_CHSELR_CHSEL3;
             break;
         
@@ -49,9 +49,9 @@ uint16_t HAL_Aio_read(AIOpin_e pin)
             channel = ADC_CHSELR_CHSEL4;
             break;
         
-        case AIOpin_VOLTAGE:
-            channel = ADC_CHSELR_CHSEL2;
-            break;
+        // case AIOpin_VOLTAGE:
+        //     channel = ADC_CHSELR_CHSEL2;
+        //     break;
 
         default:
             return 0;
